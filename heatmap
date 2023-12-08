@@ -1,0 +1,5 @@
+#!/bin/gnuplot --persist
+
+set view map
+
+splot 'heat.dat' matrix with image
