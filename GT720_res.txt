@@ -1,0 +1,191 @@
+------------------------------------------------------------------------------------
+signal length (s): 10, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+344.74ms  30.975us                    -               -         -         -         -  39.063KB  1.2027GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+344.86ms  586.54us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+345.47ms  2.37255s            (563 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+2.71802s  4.9445ms                    -               -         -         -         -  4.3943MB  888.73MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 20, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+339.40ms  59.391us                    -               -         -         -         -  78.125KB  1.2545GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+339.56ms  588.88us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+340.17ms  4.18613s            (875 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+4.52631s  7.0400ms                    -               -         -         -         -  6.8357MB  970.98MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 30, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+343.55ms  87.774us                    -               -         -         -         -  117.19KB  1.2733GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+343.74ms  586.38us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+344.34ms  6.00176s           (1188 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+6.34610s  9.8507ms                    -               -         -         -         -  9.2771MB  941.77MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 40, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+345.11ms  115.97us                    -               -         -         -         -  156.25KB  1.2850GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.32ms  586.86us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+345.93ms  7.82309s           (1500 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+8.16903s  14.120ms                    -               -         -         -         -  11.719MB  829.94MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 50, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+359.45ms  144.25us                    -               -         -         -         -  195.31KB  1.2912GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+359.70ms  587.47us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+360.32ms  9.63039s           (1813 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+9.99072s  17.601ms                    -               -         -         -         -  14.160MB  804.52MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 60, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+345.28ms  172.57us                    -               -         -         -         -  234.38KB  1.2952GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.55ms  585.93us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+346.19ms  11.4430s           (2125 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+11.7892s  20.488ms                    -               -         -         -         -  16.601MB  810.29MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 70, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+346.22ms  201.11us                    -               -         -         -         -  273.44KB  1.2966GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+346.52ms  588.94us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+347.13ms  13.2599s           (2438 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+13.6070s  23.906ms                    -               -         -         -         -  19.043MB  796.58MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 80, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+377.25ms  229.46us                    -               -         -         -         -  312.50KB  1.2988GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+377.59ms  588.30us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+378.20ms  15.0716s           (2750 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+15.4498s  26.670ms                    -               -         -         -         -  21.484MB  805.56MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 90, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+378.03ms  257.62us                    -               -         -         -         -  351.56KB  1.3014GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+378.40ms  588.52us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+379.01ms  16.8884s           (3063 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+17.2674s  29.577ms                    -               -         -         -         -  23.926MB  808.91MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 100, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+345.50ms  286.20us                    -               -         -         -         -  390.63KB  1.3016GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.88ms  586.35us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+346.50ms  18.7002s           (3375 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+19.0467s  33.165ms                    -               -         -         -         -  26.367MB  795.03MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 110, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+384.70ms  314.45us                    -               -         -         -         -  429.69KB  1.3032GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+385.12ms  587.53us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+385.74ms  20.5170s           (3688 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+20.9028s  36.166ms                    -               -         -         -         -  28.808MB  796.55MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 120, sampling frequency (Hz): 1000, spectrum size (#): 64
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+345.55ms  342.80us                    -               -         -         -         -  468.75KB  1.3041GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.99ms  586.38us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+346.60ms  22.3295s           (4000 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+22.6761s  33.525ms                    -               -         -         -         -  31.250MB  932.14MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 10, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+318.76ms  31.007us                    -               -         -         -         -  39.063KB  1.2014GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+318.89ms  1.0637ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+319.98ms  4.00610s            (563 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+4.32608s  6.9722ms                    -               -         -         -         -  6.8661MB  984.78MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 20, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+339.24ms  59.326us                    -               -         -         -         -  78.125KB  1.2559GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+339.40ms  1.0643ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+340.48ms  7.02874s            (875 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+7.36923s  11.218ms                    -               -         -         -         -  10.681MB  952.09MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 30, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+344.25ms  87.772us                    -               -         -         -         -  117.19KB  1.2733GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+344.43ms  1.0637ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+345.52ms  10.0414s           (1188 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+10.3869s  15.369ms                    -               -         -         -         -  14.495MB  943.14MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 40, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+347.42ms  116.09us                    -               -         -         -         -  156.25KB  1.2836GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+347.63ms  1.0637ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+348.72ms  13.0575s           (1500 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+13.4063s  23.030ms                    -               -         -         -         -  18.310MB  795.06MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 50, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+348.06ms  144.25us                    -               -         -         -         -  195.31KB  1.2913GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+348.30ms  1.0646ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+349.39ms  16.0782s           (1813 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+16.4276s  27.698ms                    -               -         -         -         -  22.125MB  798.79MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 60, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+344.49ms  172.60us                    -               -         -         -         -  234.38KB  1.2950GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+344.76ms  1.0658ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+345.84ms  19.0954s           (2125 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+19.4412s  27.686ms                    -               -         -         -         -  25.940MB  936.94MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 70, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+346.33ms  201.05us                    -               -         -         -         -  273.44KB  1.2971GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+346.62ms  1.0630ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+347.71ms  22.1268s           (2438 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+22.4745s  37.281ms                    -               -         -         -         -  29.754MB  798.12MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 80, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+350.66ms  229.40us                    -               -         -         -         -  312.50KB  1.2991GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+350.98ms  1.0679ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+352.07ms  25.1338s           (2750 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+25.4859s  42.183ms                    -               -         -         -         -  33.569MB  795.80MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 90, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+345.43ms  257.75us                    -               -         -         -         -  351.56KB  1.3008GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.79ms  1.0648ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+346.88ms  28.1557s           (3063 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+28.5026s  47.007ms                    -               -         -         -         -  37.384MB  795.28MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 100, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+344.85ms  286.07us                    -               -         -         -         -  390.63KB  1.3022GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+345.23ms  1.0655ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+346.32ms  31.1818s           (3375 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+31.5281s  52.405ms                    -               -         -         -         -  41.198MB  786.15MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 110, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+343.52ms  314.42us                    -               -         -         -         -  429.69KB  1.3033GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+343.92ms  1.0627ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+345.01ms  34.2044s           (3688 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+34.5494s  51.030ms                    -               -         -         -         -  45.013MB  882.09MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+------------------------------------------------------------------------------------
+signal length (s): 120, sampling frequency (Hz): 1000, spectrum size (#): 100
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+346.50ms  342.83us                    -               -         -         -         -  468.75KB  1.3039GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+346.94ms  1.0640ms            (250 4 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+348.03ms  37.2306s           (4000 4 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+37.5786s  52.745ms                    -               -         -         -         -  48.828MB  925.73MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]

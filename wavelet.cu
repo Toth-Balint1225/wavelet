@@ -19,7 +19,6 @@
 
 
 // control solution (copied from the serial CPU implementation)
-using Trafo = std::vector<std::vector<float>>;
 void control(float* s, float* w_mat, float* c, size_t M, size_t N, size_t F)
 {
 	for (size_t k=0;k<F;k++)

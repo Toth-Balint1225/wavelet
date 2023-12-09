@@ -5,6 +5,10 @@ wavelet: wavelet.cu utils.o
 	nvcc wavelet.o utils.o -o wavelet
 #./wavelet > heat.dat
 
+tester: main.cu utils.o
+	nvcc -c main.cu
+	nvcc main.o utils.o -o $@
+	./$@ 10 1000 64
 
 plot: seq
 	@./$< > plot.dat
