@@ -7,4 +7,20 @@ Test of the simple_transformer function with the wavelet generated on the host.
 452.53ms  2.48485s             (18 1 1)      (1024 1 1)        19        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_nogen(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [114]
 2.93738s  4.9816ms                    -               -         -         -         -  4.3943MB  882.11MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
 
-Test of gen_wavelet_inplace, there is no copy for wavelets and around 120 ms CPU time was eliminated
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test of stream_transformer, with the wavelet generated on the GPU
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+325.99ms  22.463us                    -               -         -         -         -  39.063KB  1.6584GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+326.14ms  588.99us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [113]
+326.75ms  2.44082s             (18 1 1)      (1024 1 1)        19        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_nogen(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [116]
+2.76758s  4.3999ms                    -               -         -         -         -  4.3943MB  998.72MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test of flattened_transformer, wavelet is generated on GPU, memory is copied async and the result is a matrix.
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+326.15ms  31.007us                    -               -         -         -         -  39.063KB  1.2014GB/s      Pinned      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+326.28ms  586.50us            (250 2 1)       (32 32 1)        21        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float*, float*) [114]
+326.89ms  2.37307s            (563 2 1)       (32 32 1)        25        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_advanced(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [117]
+2.69996s  4.4476ms                    -               -         -         -         -  4.3943MB  988.01MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
