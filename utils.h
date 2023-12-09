@@ -7,6 +7,8 @@
 
 constexpr float PI = 3.1415926535;
 
+using Trafo = std::vector<std::vector<float>>;
+
 auto  operator <<(std::ostream& os, std::vector<float> const& vec) -> std::ostream&;
 auto plot_func(std::vector<float> const& x, std::vector<float> const& y) -> void;
 auto plot_trafo(std::vector<std::vector<float>> const& data) -> void;
