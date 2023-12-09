@@ -288,9 +288,78 @@ __global__ void wav_kernel_nogen(float* s, float* w_mat_re, float* w_mat_im, flo
 			}
 		}
 		// finally, we use the complex norm in the i'th row of the transform
-		c[i * (M+N-1) + tid] = sqrt(acc_re*acc_re + acc_im*acc_im);
+		c[i * (M+N-1) + tid] = sqrtf(acc_re*acc_re + acc_im*acc_im);
 		//printf("tid: %lu iteration %lu writing %f into c[%lu] \n", tid, i, acc, i * (M+N-1) + tid);
 	}
+}
+
+__global__ void gen_wavelets(size_t N, size_t F, float fmin, float fdiff, float h, float wavelet_min, float morlet_base, float* wavelet_mat_re, float* wavelet_mat_im)
+{
+    size_t col = blockIdx.x * blockDim.x + threadIdx.x;
+	size_t row = blockIdx.y * blockDim.y + threadIdx.y;
+	if (! (row < F && col < N))
+		return;
+	// get what row we're in -> implies freq
+	float freq = fmin + fdiff * row;
+	float tx = freq * (wavelet_min + col * h);
+
+	// tester real and imag components will be shared memory, so we won't need to pass it into the function
+	wavelet_mat_re[row * N + col] = freq * cosf(morlet_base * tx) * expf(-1 * (tx * tx) / 2);
+	wavelet_mat_im[row * N + col] = freq * sinf(morlet_base * tx) * expf(-1 * (tx * tx) / 2);
+	// printf("k: %lu (%f, %f)\n", k, tester_r[k], tester_i[k]);
+}
+
+__global__ void identical(size_t N, size_t F, float* re, float* im)
+{
+	size_t item = blockIdx.x * blockDim.x + threadIdx.x;
+	if (!(item < N*F))
+		return;
+	printf("item %lu: (%f, %f)\n", item, re[item], im[item]);
+}
+
+void gen_wavelet_inplace(size_t sample_freq, float fmin, float fmax, size_t freq_num)
+{
+	size_t F = freq_num;
+	float wavelet_min = -4;
+	float wavelet_max = 4;
+	float morlet_base = M_PI * 2;
+	float h = 1.0 / sample_freq;
+	float fdiff = (fmax - fmin) / freq_num;
+	size_t N = (wavelet_max - wavelet_min) * sample_freq;
+
+	float* re = new float[N * F];
+	float* im = new float[N * F];
+
+
+	float *d_wav_re, *d_wav_im;
+	CHECK_ERR(cudaMalloc((void**)&d_wav_re, N * F * sizeof(float)));
+	CHECK_ERR(cudaMalloc((void**)&d_wav_im, N * F * sizeof(float)));
+
+	unsigned T = 32;
+	dim3 grid = dim3((N + T - 1) / T, (F + T - 1) / T);
+	dim3 block = dim3(T, T);
+	cudaEvent_t gen_finished;
+	cudaEventCreate(&gen_finished);
+	gen_wavelets<<<grid, block>>>(N, F, fmin, fdiff, h, wavelet_min, morlet_base, d_wav_re, d_wav_im);
+	cudaEventRecord(gen_finished);
+	LAST_ERR();
+
+	cudaEventSynchronize(gen_finished);
+	identical<<<(N + 1024 - 1) / 1024, 1024>>>(N, F, d_wav_re, d_wav_im);
+	LAST_ERR();
+
+	CHECK_ERR(cudaMemcpy(re, d_wav_re, N * F * sizeof(float), cudaMemcpyDeviceToHost));
+	CHECK_ERR(cudaMemcpy(im, d_wav_im, N * F * sizeof(float), cudaMemcpyDeviceToHost));
+
+	/*for (size_t i=0;i<N;i++) {
+		std::cout << re[i] << ", ";
+	}
+	std::cout << std::endl;*/
+
+	CHECK_ERR(cudaFree(d_wav_re));
+	CHECK_ERR(cudaFree(d_wav_im));
+	delete [] re;
+	delete [] im;
 }
 
 // test driver, with randomly generated data
@@ -428,6 +497,104 @@ Trafo simple_transformer(std::vector<float> signal_vector, size_t M, float fmin,
 
 }
 
+Trafo stream_transformer(std::vector<float> signal_vector, size_t M, float fmin, float fmax, size_t freq_num, float sample_freq)
+{
+	float wavelet_min = -4;
+	float wavelet_max = 4;
+	size_t F = freq_num;
+	float morlet_base = M_PI * 2;
+	float h = 1.0 / sample_freq;
+	float fdiff = (fmax - fmin) / freq_num;
+	size_t N = (wavelet_max - wavelet_min) * sample_freq;
+
+	float* signal;
+	CHECK_ERR(cudaMallocHost((void**)&signal, M * sizeof(float)));
+	float* wavelet_mat_re = new float[N * F];
+	float* wavelet_mat_im = new float[N * F];
+	float* transform = new float[(M+N-1) * F];
+	float* transform_control  = new float[(M+N-1) * F];
+
+	// GPU handles
+	float *d_signal, *d_wavelet_mat_re, *d_wavelet_mat_im, *d_transform;
+	CHECK_ERR(cudaMalloc((void**)&d_signal, M * sizeof(float)));
+	CHECK_ERR(cudaMalloc((void**)&d_wavelet_mat_re, N * F * sizeof(float)));
+	CHECK_ERR(cudaMalloc((void**)&d_wavelet_mat_im, N * F * sizeof(float)));
+	CHECK_ERR(cudaMalloc((void**)&d_transform, (M+N-1) * F * sizeof(float)));
+
+	// init
+	for (size_t i=0;i<M;i++)
+		signal[i] = signal_vector[i];
+
+	// this later will be the wavelet generator (maybe on the GPU, I have no idea yet)
+	float tx = 0.0;
+	float freq = 0;
+	for (size_t i=0;i<F;i++) {
+		freq = fmin + i * fdiff;
+		for (size_t j=0;j<N;j++) {
+			tx = freq * (wavelet_min + j * h);
+			wavelet_mat_re[i*N+j] = freq * cos(morlet_base * tx) * exp(-1 * (tx * tx) / 2);
+			wavelet_mat_im[i*N+j] = freq * sin(morlet_base * tx) * exp(-1 * (tx * tx) / 2);
+		}
+	}
+
+	CHECK_ERR(cudaMemcpy(d_wavelet_mat_re, wavelet_mat_re, N * F * sizeof(float), cudaMemcpyHostToDevice));
+	CHECK_ERR(cudaMemcpy(d_wavelet_mat_im, wavelet_mat_im, N * F * sizeof(float), cudaMemcpyHostToDevice));
+	size_t T = 1024;
+
+	// how many streams we need? - ceil(M / N)
+	const size_t STREAM_NUM = std::ceil((float)M / (float)N);
+	// stride will be N
+	cudaStream_t stream[STREAM_NUM];
+	for (size_t i=0;i<STREAM_NUM;i++) {
+		cudaStreamCreate(&stream[i]);
+	}
+	
+	// initial block copied like before
+	CHECK_ERR(cudaMemcpy(d_signal,signal,N*sizeof(float), cudaMemcpyHostToDevice));
+	for (size_t i=0;i<STREAM_NUM;i++) {
+		// every stream will copy the block next to it
+		CHECK_ERR(cudaMemcpyAsync(d_signal + (1+i)*N, signal + (1+i)*N, N*sizeof(float), cudaMemcpyHostToDevice, stream[i]));
+		wav_kernel_nogen<<<(N + M + T - 2) / T, T, 0, stream[i]>>>(d_signal + (i*N), d_wavelet_mat_re, d_wavelet_mat_im, d_transform, M, N, F);
+		CHECK_ERR(cudaMemcpyAsync(transform, d_transform, (M+N-1) * F * sizeof(float), cudaMemcpyDeviceToHost, stream[i]));
+	}
+
+	LAST_ERR();
+
+
+	//control_trafo(signal, wavelet_mat_re, wavelet_mat_im, transform_control, M, N, F);
+	//compare(transform, transform_control, M, N, F);
+
+/*
+	for (size_t i=0;i<(N+M-1) * F; i++) {
+		std::cout << transform[i] << " ";
+	}
+	std::cout << std::endl;
+*/
+	Trafo res_vec(F);
+	for (size_t i=0;i<F;i++) {
+		res_vec[F-i-1] = std::vector<float>(N+M-1);
+		for (size_t j=0;j<N+M-1;j++) {
+			res_vec[F-i-1][j] = transform[i * (N+M-1) + j];
+		}
+	}
+
+	for (size_t i=0;i<STREAM_NUM;i++) {
+		cudaStreamDestroy(stream[i]);
+	}
+	CHECK_ERR(cudaFree(d_signal));
+	CHECK_ERR(cudaFree(d_wavelet_mat_re));
+	CHECK_ERR(cudaFree(d_wavelet_mat_im));
+	CHECK_ERR(cudaFree(d_transform));
+	delete[] signal;
+	delete[] wavelet_mat_re;
+	delete[] wavelet_mat_im;
+	delete[] transform;
+
+	return res_vec;
+
+}
+
+
 // test cases
 int main()
 {
@@ -474,8 +641,11 @@ int main()
 
 	// tests for benchmarking
 	// wav_kernel_nogen_driver(10000, 8000, 64);
-	auto trafo = simple_transformer(signal, signal.size(), 1, 100, 64, sample_freq);
-	plot_trafo(trafo);
+	//auto trafo = simple_transformer(signal, signal.size(), 1, 100, 64, sample_freq);
+
+	//plot_trafo(trafo);
+
+	gen_wavelet_inplace(1000, 1, 100, 64);
 
 	CHECK_ERR(cudaDeviceReset());
     return 0;

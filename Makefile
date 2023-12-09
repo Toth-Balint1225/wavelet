@@ -3,7 +3,7 @@ cc := g++ -Wall -Werror -Wpedantic -fopenmp
 wavelet: wavelet.cu utils.o
 	nvcc -c wavelet.cu
 	nvcc wavelet.o utils.o -o wavelet
-	./wavelet > heat.dat
+#./wavelet > heat.dat
 
 
 plot: seq

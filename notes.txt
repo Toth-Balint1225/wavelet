@@ -1,0 +1,10 @@
+Test of the simple_transformer function with the wavelet generated on the host.  
+
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput  SrcMemType  DstMemType           Device   Context    Stream  Name
+448.85ms  22.462us                    -               -         -         -         -  39.063KB  1.6585GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+449.18ms  1.4570ms                    -               -         -         -         -  1.9531MB  1.3090GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+450.94ms  1.4570ms                    -               -         -         -         -  1.9531MB  1.3091GB/s    Pageable      Device  NVIDIA GeForce          1         7  [CUDA memcpy HtoD]
+452.53ms  2.48485s             (18 1 1)      (1024 1 1)        19        0B        0B         -           -           -           -  NVIDIA GeForce          1         7  wav_kernel_nogen(float*, float*, float*, float*, unsigned long, unsigned long, unsigned long) [114]
+2.93738s  4.9816ms                    -               -         -         -         -  4.3943MB  882.11MB/s      Device    Pageable  NVIDIA GeForce          1         7  [CUDA memcpy DtoH]
+
+Test of gen_wavelet_inplace, there is no copy for wavelets and around 120 ms CPU time was eliminated
