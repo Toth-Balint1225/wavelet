@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cstdlib>
+#include <chrono>
 
 #include "utils.h"
-
-#include "timetest.h"
 
 auto transform_array_impl(float const* signal, size_t n, float* tester_r, float* tester_i, size_t m, float h, float wavelet_start, float morlet_base, float fmin, float fdiff, float freq, size_t sample_num, float* res, size_t res_width) -> void {
 	for (size_t i = 0; i < sample_num; i++) {
@@ -57,9 +56,12 @@ auto transform_wavelet_array(std::vector<float> const& signal, float fmin, float
 	std::copy(signal.begin(), signal.end(), signal_raw);
 
 	// this will be the kernel call
-	TIME_START();
+	std::chrono::high_resolution_clock clock;
+	auto start = clock.now();
 	transform_array_impl(signal_raw, n, tester_r, tester_i, m, h, wavelet_start, morlet_base, fmin, fdiff, freq, sample_num, res, res_width);
-	TIME_END();
+	auto end = clock.now();
+	auto duration = end - start;
+	std::cout << "[TIME] elapsed time: " << std::chrono::duration_cast<std::chrono::milliseconds>(duration).count() << " ms" << std::endl;
 
 	Trafo res_vec(sample_num);
 	for (size_t i=0;i<sample_num;i++) {
@@ -114,8 +116,5 @@ int main(int argc, char** argv)
 		plot_trafo(trafo);
 	}
 
-	(void)cuda_measure_start;
-	(void)cuda_measure_end;
-	(void)cuda_measure_elapsed;
 	return 0;
 }
