@@ -1,4 +1,8 @@
-cc := g++ -Wall -Werror -Wpedantic -fopenmp 
+cc := g++ -Wall -fopenmp 
+
+seqtest: seqtest.cpp utils.o
+	$(cc) -c seqtest.cpp
+	$(cc) seqtest.o utils.o -o $@
 
 wavelet: wavelet.cu utils.o
 	nvcc -c wavelet.cu
