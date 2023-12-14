@@ -1,5 +1,6 @@
 *.dat 
 *.o 
+*.sqlite
 seq
 wavelet
 conv

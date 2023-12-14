@@ -410,9 +410,9 @@ auto main_basic() -> int {
 }
 
 auto main() -> int {
-	// main_wavelets();
+	main_wavelets();
 	// main_trafo();
-	main_advanced();
+	//main_advanced();
 	// main_basic();
 	// main_conv();
 	return 0;

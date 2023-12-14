@@ -1,0 +1,344 @@
+------------------------------------------------------------------------------------
+signal length (s): 10, sampling frequency (Hz): 1000, spectrum size (#): 64
+
+NOTICE: Existing SQLite export found: a100_results/a100_10_1000_64.sqlite
+        It is assumed file was previously exported from: a100_results/a100_10_1000_64.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [a100_results/a100_10_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+ Start (ns)   Duration (ns)  CorrId  GrdX  GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -----------  -------------  ------  ----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 607.295.934          5.056     110                                                                           0,040       7911,360           Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 607.331.709          9.248     112   250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 607.355.964      9.240.930     115   563     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 616.603.390        710.317     117                                                                           4,608       6483,096           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 20, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_20_1000_64.sqlite from a100_results/a100_20_1000_64.nsys-rep
+Processing [a100_results/a100_20_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX  GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  ----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 1.143.186.910          6.463     110                                                                           0,080       12378,080          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 1.143.220.221          8.479     112   250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 1.143.243.388     13.179.829     115   875     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 1.156.431.633      1.085.474     117                                                                           7,168       6601,492           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 30, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_30_1000_64.sqlite from a100_results/a100_30_1000_64.nsys-rep
+Processing [a100_results/a100_30_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 2.053.301.118          8.160     110                                                                            0,120       14705,880          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 2.053.350.300          9.280     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 2.053.380.028     18.303.496     115  1.188     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 2.071.690.660      1.549.525     117                                                                            9,728       6274,395           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 40, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_40_1000_64.sqlite from a100_results/a100_40_1000_64.nsys-rep
+Processing [a100_results/a100_40_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 3.201.445.360          9.952     110                                                                            0,160       16077,120          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 3.201.476.527          9.152     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 3.201.500.911     24.128.264     115  1.500     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 3.225.632.502      2.011.561     117                                                                            12,288      6107,009           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 50, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_50_1000_64.sqlite from a100_results/a100_50_1000_64.nsys-rep
+Processing [a100_results/a100_50_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 4.964.520.611         11.521     110                                                                            0,200       17359,600          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 4.964.553.123          9.184     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 4.964.577.539     29.194.430     115  1.813     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 4.993.780.097      4.417.564     117                                                                            14,848      3355,590           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 60, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_60_1000_64.sqlite from a100_results/a100_60_1000_64.nsys-rep
+Processing [a100_results/a100_60_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 6.843.157.194         12.992     110                                                                            0,240       18472,800          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 6.843.190.601          8.161     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 6.843.213.353     30.402.655     115  2.125     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 6.873.620.168      2.554.024     117                                                                            17,408      6806,428           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 70, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_70_1000_64.sqlite from a100_results/a100_70_1000_64.nsys-rep
+Processing [a100_results/a100_70_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 9.373.622.229         15.200     110                                                                            0,280       18420,920          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 9.373.655.157          8.320     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 9.373.678.260     35.805.068     115  2.438     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 9.409.487.264      2.855.269     117                                                                            19,968      6988,710           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 80, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_80_1000_64.sqlite from a100_results/a100_80_1000_64.nsys-rep
+Processing [a100_results/a100_80_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 11.960.578.017         17.024     110                                                                            0,320       18796,800          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 11.960.611.713          9.248     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 11.960.636.640     44.270.653     115  2.750     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 12.004.912.701      3.261.569     117                                                                            22,528      6893,490           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 90, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_90_1000_64.sqlite from a100_results/a100_90_1000_64.nsys-rep
+Processing [a100_results/a100_90_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 14.977.517.969         18.464     110                                                                            0,360       19497,240          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 14.977.550.865          9.248     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 14.977.575.185     49.462.931     115  3.063     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 15.027.046.148      3.750.961     117                                                                            25,088      6673,340           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 100, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_100_1000_64.sqlite from a100_results/a100_100_1000_64.nsys-rep
+Processing [a100_results/a100_100_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 18.518.027.942         20.127     110                                                                            0,400       19873,600          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 18.518.061.894          9.247     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 18.518.086.213     54.628.930     115  3.375     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 18.572.719.207      4.002.095     117                                                                            27,648      6884,288           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 110, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_110_1000_64.sqlite from a100_results/a100_110_1000_64.nsys-rep
+Processing [a100_results/a100_110_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 22.241.388.051         22.144     110                                                                            0,440       19869,520          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 22.241.424.787          9.216     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 22.241.449.075     59.794.641     115  3.688     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 22.301.247.172      4.297.837     117                                                                            30,208      7008,197           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 120, sampling frequency (Hz): 1000, spectrum size (#): 64
+Generating SQLite file a100_results/a100_120_1000_64.sqlite from a100_results/a100_120_1000_64.nsys-rep
+Processing [a100_results/a100_120_1000_64.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 26.213.509.907         22.496     110                                                                            0,480       21336,960          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 26.213.547.603          8.512     112    250     2     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 26.213.570.835     59.795.135     115  4.000     2     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 26.273.367.825      4.718.626     117                                                                            32,768      6913,994           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 10, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_10_1000_100.sqlite from a100_results/a100_10_1000_100.nsys-rep
+Processing [a100_results/a100_10_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+ Start (ns)   Duration (ns)  CorrId  GrdX  GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -----------  -------------  ------  ----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 569.998.838          5.087     110                                                                           0,040       7863,160           Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 570.031.925         12.096     112   250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 570.059.477     14.095.846     115   563     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 584.156.987      1.016.089     117                                                                           7,200       7084,406           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 20, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_20_1000_100.sqlite from a100_results/a100_20_1000_100.nsys-rep
+Processing [a100_results/a100_20_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX  GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  ----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 1.132.418.033          6.656     110                                                                           0,080       12019,200          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 1.132.449.713         12.160     112   250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 1.132.476.657     21.992.754     115   875     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 1.154.471.651      1.682.453     117                                                                           11,200      6652,562           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 30, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_30_1000_100.sqlite from a100_results/a100_30_1000_100.nsys-rep
+Processing [a100_results/a100_30_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 2.186.015.246          8.448     110                                                                            0,120       14204,520          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 2.186.046.926         12.224     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 2.186.074.222     29.956.960     115  1.188     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 2.216.035.661      3.038.893     117                                                                            15,200      5000,668           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 40, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_40_1000_100.sqlite from a100_results/a100_40_1000_100.nsys-rep
+Processing [a100_results/a100_40_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 3.305.503.522         10.048     110                                                                            0,160       15923,520          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 3.305.538.498         12.096     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 3.305.567.202     37.792.328     115  1.500     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 3.343.364.170      2.736.462     117                                                                            19,200      7007,854           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 50, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_50_1000_100.sqlite from a100_results/a100_50_1000_100.nsys-rep
+Processing [a100_results/a100_50_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 4.871.563.575         11.552     110                                                                            0,200       17313,000          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 4.871.597.047         11.744     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 4.871.624.599     43.924.741     115  1.813     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 4.915.551.932      3.234.667     117                                                                            23,200      7168,676           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 60, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_60_1000_100.sqlite from a100_results/a100_60_1000_100.nsys-rep
+Processing [a100_results/a100_60_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 6.908.737.775         13.376     110                                                                            0,240       17942,400          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 6.908.783.727         12.128     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 6.908.811.343     53.523.298     115  2.125     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 6.962.338.833      3.856.327     117                                                                            27,200      7044,696           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 70, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_70_1000_100.sqlite from a100_results/a100_70_1000_100.nsys-rep
+Processing [a100_results/a100_70_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+  Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ -------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 9.236.881.285         15.072     110                                                                            0,280       18577,440          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 9.236.914.149         12.513     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 9.236.941.957     61.562.737     115  2.438     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 9.298.506.358      4.543.816     117                                                                            31,200      6863,912           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 80, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_80_1000_100.sqlite from a100_results/a100_80_1000_100.nsys-rep
+Processing [a100_results/a100_80_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 12.227.519.989         16.832     110                                                                            0,320       19011,200          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 12.227.551.605         12.128     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 12.227.579.221     69.257.627     115  2.750     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 12.296.840.688      5.007.849     117                                                                            35,200      7004,720           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 90, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_90_1000_100.sqlite from a100_results/a100_90_1000_100.nsys-rep
+Processing [a100_results/a100_90_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 14.854.800.316         19.008     110                                                                            0,360       18939,240          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 14.854.833.852         12.192     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 14.854.860.860     77.165.996     115  3.063     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 14.932.035.465      5.506.857     117                                                                            39,200      7095,128           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 100, sampling frequency (Hz): 1000, spectrum size (#): 100
+
+NOTICE: Existing SQLite export found: a100_results/a100_100_1000_100.sqlite
+        It is assumed file was previously exported from: a100_results/a100_100_1000_100.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [a100_results/a100_100_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 18.601.044.245         22.432     110                                                                            0,400       17831,600          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 18.601.096.661         12.160     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 18.601.124.469     85.063.355     115  3.375     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 18.686.194.576      5.918.187     117                                                                            43,200      7257,533           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 110, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_110_1000_100.sqlite from a100_results/a100_110_1000_100.nsys-rep
+Processing [a100_results/a100_110_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 22.091.699.988         24.160     110                                                                            0,440       18211,600          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 22.091.734.580         12.224     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 22.091.761.939     92.946.545     115  3.688     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 22.184.714.436      7.059.168     117                                                                            47,200      6655,144           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
+------------------------------------------------------------------------------------
+signal length (s): 120, sampling frequency (Hz): 1000, spectrum size (#): 100
+Generating SQLite file a100_results/a100_120_1000_100.sqlite from a100_results/a100_120_1000_100.nsys-rep
+Processing [a100_results/a100_120_1000_100.sqlite] with [/opt/nvidia/nsight-systems/2023.4.1/host-linux-x64/reports/cuda_gpu_trace.py]... 
+
+ ** CUDA GPU Trace (cuda_gpu_trace):
+
+   Start (ns)    Duration (ns)  CorrId  GrdX   GrdY  GrdZ  BlkX  BlkY  BlkZ  Reg/Trd  StcSMem (MB)  DymSMem (MB)  Bytes (MB)  Throughput (MB/s)  SrcMemKd  DstMemKd           Device            Ctx  Strm                                                  Name                                                
+ --------------  -------------  ------  -----  ----  ----  ----  ----  ----  -------  ------------  ------------  ----------  -----------------  --------  --------  -------------------------  ---  ----  ----------------------------------------------------------------------------------------------------
+ 26.496.263.173         23.936     110                                                                            0,480       20053,440          Pinned    Device    NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Host-to-Device]                                                                        
+ 26.496.296.197         11.519     112    250     4     1    32    32     1       22  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  gen_wavelets(unsigned long, unsigned long, float, float, float, float, float, float *, float *)     
+ 26.496.322.949     95.660.622     115  4.000     4     1    32    32     1       32  0,000         0,000                                                            NVIDIA A100-SXM4-40GB (0)    1     7  wav_kernel_advanced(float *, float *, float *, float *, unsigned long, unsigned long, unsigned long)
+ 26.591.985.971      7.272.541     117                                                                            51,200      7014,345           Device    Pageable  NVIDIA A100-SXM4-40GB (0)    1     7  [CUDA memcpy Device-to-Host]                                                                        
+
